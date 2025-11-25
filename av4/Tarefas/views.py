@@ -11,4 +11,4 @@ class TarefaViewSet(viewsets.ModelViewSet):
  queryset = Tarefa.objects.all() 
  serializer_class = TarefaSerializer 
  filter_backends = [DjangoFilterBackend] 
- filterset_fields = ['titulo', 'projeto_id', 'prioridade']
+ filterset_fields = ['titulo', 'projeto_id', 'prioridade','status']
