@@ -16,13 +16,13 @@ class Tarefa(models.Model):
         ('5','5'),
     ) 
  prioridade = models.CharField(choices=PRIORITY_CHOICES, default=1)
+
  STATUS_CHOICES = (
         ('Incompleta', 'Tarefa Incompleta'),
         ('Concluída', 'Tarefa Concluída'),
         ('Iniciado', 'Tarefa iniciada'),
-        
     ) 
- status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Incompleta') 
+ status = models.CharField(choices=STATUS_CHOICES, default='Incompleta') 
  data_limite = models.DateField() 
  def __str__(self):
     return self.titulo 
